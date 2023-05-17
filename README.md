@@ -5,6 +5,8 @@
 Landwind is a free and open-source landing page built for SaaS and product websites based on the Tailwind CSS utility-first framework and the Flowbite Component Library featuring a hero section, customer logos, feature sections, testimonials, pricing cards, FAQ section, pre-footer CTA button and a footer.
 
 Built with ❤️ by [Themesberg](https://themesberg.com) based on Tailwind CSS and Flowbite.
+![Screenshot 2023-05-17 at 2 27 49 PM](https://github.com/MayureshwarDawkore/Java-RUN/assets/121652378/edee3be3-9e7f-4b74-8303-f12e4b017997)
+![Screenshot 2023-05-17 at 2 28 35 PM](https://github.com/MayureshwarDawkore/Java-RUN/assets/121652378/686233fc-e99b-4c0b-bc5a-5cb149a2d1f0)
 
 ## Live preview
 
