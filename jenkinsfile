@@ -1,5 +1,9 @@
 pipeline {
     agent any
+          environment {
+              AWS_REGION = 'us-east-1'  // Replace with your desired AWS region
+              EC2_INSTANCE = 'i-0bdcdcbc33e1daa16'  // Replace with your EC2 instance ID 
+
 
     stages {
         stage('Git Checkout') {
