@@ -1,23 +1,23 @@
 pipeline {
     agent any
-          environment {
-              AWS_REGION = 'us-east-1'  // Replace with your desired AWS region
-              EC2_INSTANCE = 'i-0bdcdcbc33e1daa16'  // Replace with your EC2 instance ID 
-          }
 
+environment {
+              AWS_REGION = 'us-east-1'  // Replace with your desired AWS region
+              EC2_INSTANCE = 'i-0bdcdcbc33e1daa16' 
+            }
     stages {
         stage('Git Checkout') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/MayureshwarDawkore/Java-RUN.git']])
+                } 
+         }
+         stage('Deploy') {
+            steps {
+                 sh '''
+                    # Copy code to nginx
+                     cp -r /var/lib/jenkins/workspace/Java-Project/* /var/www/html
+                       '''
+                }
             }
-        }
-        stage('Deploy') {
-      steps {
-        sh '''
-          # Copy code to nginx
-          sudo cp -r /var/lib/jenkins/workspace/Java-Project/* /usr/share/nginx/html
-          '''
-      }
-    }
-    }
-}
+        }             
+}   
